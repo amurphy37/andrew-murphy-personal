@@ -75,14 +75,14 @@ export default function About() {
             </p>
             <p>
               In 2019 I consulted with several client engineering teams to ensure real-time data flow
-              to and from Iterable so that our customers' Marketing teams could leverage our campaign automation.
+              to and from Iterable so that our customers&apos; Marketing teams could leverage our campaign automation.
               My curiosity burned to the point where I decided to return to school in 2020 to receive my bootcamp certificate
-              in full stack web devlopment. Since then, I've bolstered my creative solutioning in designing and developing
+              in full stack web devlopment. Since then, I&apos;ve bolstered my creative solutioning in designing and developing
               several passion projects and I return to calls with engineers as a peer with mutual respect.  
             </p>            
             
             <p>
-              Today, I’m pursuing my MBA at UCI Paul Merage Schoool of Business, where I plan to combine 
+              Today, I&apos;m pursuing my MBA at UCI Paul Merage Schoool of Business, where I plan to combine 
               my previous experience in SaaS sales, consulting and software development with a deeper understanding
               of business strategy and analytics as a product manager building impactful solutions.
             </p>
