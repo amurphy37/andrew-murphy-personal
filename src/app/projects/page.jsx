@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import logoVibify from "@/images/logos/Vibify.svg"
+import logoVibify from "@/images/logos/vibify.svg"
 import logoNaomi from "@/images/logos/donation.svg"
 import logoTrailTails from "@/images/logos/trailTails.svg"
 import logoDreamJob from "@/images/logos/dreamJob.svg"
