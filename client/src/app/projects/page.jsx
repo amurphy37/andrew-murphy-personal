@@ -12,7 +12,7 @@ const projects = [
     name: 'Vibify',
     description:
       "The power of music in shared human connection. I'm setting out to re-shape how we connect through music",
-    link: { href: 'https://github.com/amurphy37/Vibify', label: 'planetaria.tech' },
+    link: { href: 'https://www.youtube.com/watch?v=7eDrI8Kt7y0', label: 'Vibify Product Demo' },
     logo: logoVibify,
   },
   {

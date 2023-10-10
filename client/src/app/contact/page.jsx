@@ -3,6 +3,8 @@
 import React, { useState } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
+import axios from "axios"
+
 
 export default function Contact() {
 
@@ -14,26 +16,48 @@ export default function Contact() {
   const [message, setMessage] = useState(" ")
 
   const handleSubmit = async (e) => {
+
     e.preventDefault()
 
-    const res = await fetch("../api/sendgrid", {
-      body: JSON.stringify({
-        email: email,
-        fullname: firstName,
-        message: message,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-      method: "POST",
-    });
+    try {
 
-    const { error } = await res.json();
-    if (error) {
-      console.log(error);
-      return;
+      let body = {
+        name: firstName + " " + lastName,
+        company: company,
+        email: email,
+        phone: phone,
+        message: message
+      }
+
+      let url
+
+    if (process.env.NODE_ENV === "production") {
+      url = "/sendEmail"
     }
-  console.log(fullname, email, subject, message);
+    else {
+      url = "http://localhost:8080/sendEmail"
+    }
+  
+
+      let stringifyBody = JSON.stringify(body)
+
+      const emailSend = await axios({
+        method: "post",
+        url: url,
+        data: stringifyBody,
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        }
+
+      })
+
+      await res.status(200).json({ message: 'Email sent successfully' });
+
+    } catch (error) {
+      console.error(error);
+      await res.status(500).json({ message: 'Internal Server Error' });
+    }
   }
 
 
